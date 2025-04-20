@@ -1,5 +1,46 @@
 *, *::before, *::after {
   margin: 0;
   padding: 0;
-  box-sizing: boder-box;
+  box-sizing: border-box;
+}
+
+.CV {
+  margin: 1.25rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.info {
+  background-color: #0D0A0B;
+  display: flex;
+  justify-content: space-around;
+}
+
+.name {
+  padding: 1.5rem;
+}
+
+.name h1 {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.25rem;
+}
+
+.name p {
+  margin-top: 1rem;
+  color: #fff;
+}
+
+.contactInfo {
+  background: #81A4CD;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+a:visited {
+  color: rgb(0, 0, 238);
 }
