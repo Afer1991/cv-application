@@ -55,3 +55,15 @@ h1 {
     font-size: 1.3125rem;
   }
 }
+
+@media (min-width: 700px) {
+  .container input {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 925px) {
+  .container input {
+    font-size: 1.3125rem;
+  }
+}

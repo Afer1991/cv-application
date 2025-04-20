@@ -7,6 +7,7 @@
 .CV {
   margin: 1.25rem;
   font-family: "Roboto", sans-serif;
+  min-width: 50%;
 }
 
 .info {
@@ -16,25 +17,30 @@
 }
 
 .name {
-  padding: 1.5rem;
+  padding: .65rem;
 }
 
 .name h1 {
   margin: 0;
   font-family: "Roboto", sans-serif;
-  font-size: 1.25rem;
+  font-size: .75rem;
 }
 
 .name p {
   margin-top: 1rem;
   color: #fff;
+  font-size: .5rem;
 }
 
 .contactInfo {
   background: #81A4CD;
-  padding: 1.5rem;
+  padding: .65rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 3fr;
+}
+
+.contactInfo > * {
+  font-size: .5rem;
 }
 
 .bold {
@@ -43,4 +49,64 @@
 
 a:visited {
   color: rgb(0, 0, 238);
+}
+
+@media (min-width: 375px) {
+  .name h1 {
+    font-size: 1rem;
+  }
+  
+  .name p {
+    font-size: .65rem;
+  }
+  
+  .contactInfo > * {
+    font-size: .65rem;
+  }
+}
+
+@media (min-width: 525px) {
+  .name h1 {
+    font-size: 1.5rem;
+  }
+  
+  .name p {
+    font-size: .75rem;
+  }
+  
+  .contactInfo > * {
+    font-size: .75rem;
+  }
+}
+
+@media (min-width: 700px) {
+  #root {
+    display: flex;
+  }
+
+  .name h1 {
+    font-size: 1rem;
+  }
+  
+  .name p {
+    font-size: .65rem;
+  }
+  
+  .contactInfo > * {
+    font-size: .65rem;
+  }
+}
+
+@media (min-width: 925px) {
+  .name h1 {
+    font-size: 1.5rem;
+  }
+  
+  .name p {
+    font-size: .75rem;
+  }
+  
+  .contactInfo > * {
+    font-size: .75rem;
+  }
 }
