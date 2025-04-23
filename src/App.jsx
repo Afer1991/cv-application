@@ -10,6 +10,7 @@ function App() {
   const [phoneNumber, setPhoneNumber] = useState('(000) 000-00000');
   const [email, setEmail] = useState('email@email.com');
   const [gitHub, setGitHub] = useState('');
+  const [aboutMe, setAboutMe] = useState('Tell something about yourself...');
 
   function firstNameChange(e) {
     setFirstName(e.target.value);
@@ -39,6 +40,10 @@ function App() {
     setGitHub(e.target.value);
   }
 
+  function aboutMeChange(e) {
+    setAboutMe(e.target.value);
+  }
+
   return (
     <>
       <section className="CVBuilder">
@@ -51,7 +56,7 @@ function App() {
           updateEmail={emailChange}
           updateGitHub={gitHubChange}
         />
-        <AboutMe />
+        <AboutMe updateAboutMe={aboutMeChange} />
       </section>
       <section className="CV">
         <div className="info">
@@ -77,7 +82,7 @@ function App() {
           <h1>About<span>Me</span></h1>
           <hr />
           <div>
-            <p>Tell something about yourself...</p>
+            <p>{aboutMe}</p>
           </div>
         </div>
       </section>

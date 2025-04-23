@@ -10,7 +10,7 @@ function AboutMe ({updateAboutMe}) {
         <h1>About Me</h1>
       </div>
       <div>
-        <textarea rows="5" placeholder="Tell something about yourself..."></textarea>
+        <textarea rows="5" placeholder="Tell something about yourself..." onChange={updateAboutMe}></textarea>
       </div>
     </div>
   );
