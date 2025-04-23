@@ -23,7 +23,7 @@ function Experience () {
       <div>
         <textarea rows="3" placeholder="Describe your responsibilities and achievements..."></textarea>
       </div>
-      <div>
+      <div className={styles.buttonContainer}>
         <Button />
       </div>
     </div>

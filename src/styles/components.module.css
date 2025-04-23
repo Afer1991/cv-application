@@ -48,26 +48,43 @@ svg {
   resize: none;
 }
 
+.button {
+  background-color: #75757548;
+  border: none;
+  border-radius: .5rem;
+  padding: .35rem 2.5rem;
+  margin-top: .75rem;
+}
+
+.button:hover {
+  opacity: .8;
+  cursor: pointer;
+}
+
+.button svg {
+  font-size: 1rem;
+}
+
 @media (min-width: 425px) {
-  .container input, .container textarea {
+  .container input, .container textarea, .button svg {
     font-size: 1rem;
   }
 }
 
 @media (min-width: 600px) {
-  .container input, .container textarea {
+  .container input, .container textarea, .button svg {
     font-size: 1.3125rem;
   }
 }
 
 @media (min-width: 700px) {
-  .container input, .container textarea {
+  .container input, .container textarea, .button svg {
     font-size: 1rem;
   }
 }
 
 @media (min-width: 925px) {
-  .container input, .container textarea {
+  .container input, .container textarea, .button svg {
     font-size: 1.3125rem;
   }
 }
