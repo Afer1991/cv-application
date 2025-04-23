@@ -73,6 +73,13 @@ function App() {
             }
           </div>
         </div>
+        <div class="about-me">
+          <h1>About<span>Me</span></h1>
+          <hr />
+          <div>
+            <p></p>
+          </div>
+        </div>
       </section>
     </>
   )
