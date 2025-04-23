@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faScrewdriverWrench } from "@fortawesome/free-solid-svg-icons"
+import Button from './Button'
 import styles from '../styles/components.module.css'
 
 function Experience () {
@@ -21,6 +22,9 @@ function Experience () {
       </div>
       <div>
         <textarea rows="3" placeholder="Describe your responsibilities and achievements..."></textarea>
+      </div>
+      <div>
+        <Button />
       </div>
     </div>
   );
