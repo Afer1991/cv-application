@@ -8,22 +8,25 @@
   margin: 1.25rem;
   font-family: "Roboto", sans-serif;
   min-width: 50%;
+  background: #DBE4EE;
 }
 
 .info {
   background-color: #0D0A0B;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 1.5rem;
 }
 
 .name {
-  padding: .65rem;
+  padding: .65rem 0;
 }
 
 .name h1 {
   margin: 0;
   font-family: "Roboto", sans-serif;
   font-size: .75rem;
+  color: #FFF;
 }
 
 .name p {
@@ -51,31 +54,57 @@ a:visited {
   color: rgb(0, 0, 238);
 }
 
+.aboutMe {
+  padding: 1.5rem;
+}
+
+.aboutMe h1 {
+  color: #3E7CB1;
+  font-weight: bolder;
+  margin-bottom: .5rem;
+  font-size: .75rem;
+}
+
+.aboutMe span {
+  color: #000;
+}
+
+hr {
+  margin-bottom: .5rem;
+  border: 1px solid #000;
+}
+
+.aboutMe p {
+  font-size: .5rem;
+}
+
 @media (min-width: 375px) {
-  .name h1 {
-    font-size: 1rem;
+  .name h1, .aboutMe h1 {
+    font-size: .9rem;
   }
   
-  .name p {
+  .name p, .aboutMe p, .contactInfo > * {
     font-size: .65rem;
   }
-  
-  .contactInfo > * {
-    font-size: .65rem;
+
+  .info, .aboutMe {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
   }
 }
 
 @media (min-width: 525px) {
-  .name h1 {
+  .name h1, .aboutMe h1 {
     font-size: 1.5rem;
   }
   
-  .name p {
+  .name p, .aboutMe p, .contactInfo > * {
     font-size: .75rem;
   }
-  
-  .contactInfo > * {
-    font-size: .75rem;
+
+  .info, .aboutMe {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 
@@ -84,29 +113,26 @@ a:visited {
     display: flex;
   }
 
-  .name h1 {
+  .name h1, .aboutMe h1 {
     font-size: 1rem;
   }
   
-  .name p {
-    font-size: .65rem;
-  }
-  
-  .contactInfo > * {
+  .name p, .aboutMe p, .contactInfo > * {
     font-size: .65rem;
   }
 }
 
 @media (min-width: 925px) {
-  .name h1 {
+  .name h1, .aboutMe h1 {
     font-size: 1.5rem;
   }
   
-  .name p {
+  .name p, .aboutMe p, .contactInfo > * {
     font-size: .75rem;
   }
-  
-  .contactInfo > * {
-    font-size: .75rem;
+
+  .info, .aboutMe {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }

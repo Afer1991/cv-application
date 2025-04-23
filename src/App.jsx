@@ -41,7 +41,7 @@ function App() {
 
   return (
     <>
-      <section className="CV-builder">
+      <section className="CVBuilder">
         <PersonalInfo 
           updateFirstName={firstNameChange}
           updateLastName={lastNameChange}
@@ -73,11 +73,11 @@ function App() {
             }
           </div>
         </div>
-        <div class="about-me">
+        <div className="aboutMe">
           <h1>About<span>Me</span></h1>
           <hr />
           <div>
-            <p></p>
+            <p>Tell something about yourself...</p>
           </div>
         </div>
       </section>
