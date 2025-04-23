@@ -1,5 +1,6 @@
 import PersonalInfo from "./components/PersonalInfo"
 import AboutMe from "./components/AboutMe"
+import Experience from "./components/Experience";
 import { useState } from 'react';
 
 function App() {
@@ -57,6 +58,7 @@ function App() {
           updateGitHub={gitHubChange}
         />
         <AboutMe updateAboutMe={aboutMeChange} />
+        <Experience />
       </section>
       <section className="CV">
         <div className="info">
