@@ -4,6 +4,7 @@ import Button from './Button'
 import styles from '../styles/components.module.css'
 
 function Experience ({
+  experienceNum,
   updatePosition,
   updateCompany,
   updateStartDate,
@@ -14,7 +15,7 @@ function Experience ({
     <div className={styles.container}>
       <div className={styles.heading}>
         <FontAwesomeIcon icon={faScrewdriverWrench} />
-        <h1>Experience</h1>
+        <h1>Experience {experienceNum}</h1>
       </div>
       <div>
         <input placeholder="Position" onChange={updatePosition} />

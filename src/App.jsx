@@ -2,7 +2,7 @@ import PersonalInfo from "./components/PersonalInfo"
 import AboutMe from "./components/AboutMe"
 import Experience from "./components/Experience";
 import { useState } from 'react';
-import AddExperience from "./components/AddExperience";
+
 
 function App() {
   const [firstName, setFirstName] = useState('First Name');
@@ -106,6 +106,66 @@ function App() {
     setExperience1({ ...experience1, description: e.target.value });
   }
 
+  function position2Change(e) {
+    setExperience2({ ...experience2, position: e.target.value });
+  }
+
+  function company2Change(e) {
+    setExperience2({ ...experience2, company: e.target.value });
+  }
+
+  function start2Change(e) {
+    setExperience2({ ...experience2, start: e.target.value });
+  }
+
+  function end2Change(e) {
+    setExperience2({ ...experience2, end: e.target.value });
+  }
+
+  function description2Change(e) {
+    setExperience2({ ...experience2, description: e.target.value });
+  }
+
+  function position3Change(e) {
+    setExperience3({ ...experience3, position: e.target.value });
+  }
+
+  function company3Change(e) {
+    setExperience3({ ...experience3, company: e.target.value });
+  }
+
+  function start3Change(e) {
+    setExperience3({ ...experience3, start: e.target.value });
+  }
+
+  function end3Change(e) {
+    setExperience3({ ...experience3, end: e.target.value });
+  }
+
+  function description3Change(e) {
+    setExperience3({ ...experience3, description: e.target.value });
+  }
+
+  function position4Change(e) {
+    setExperience4({ ...experience4, position: e.target.value });
+  }
+
+  function company4Change(e) {
+    setExperience4({ ...experience4, company: e.target.value });
+  }
+
+  function start4Change(e) {
+    setExperience4({ ...experience4, start: e.target.value });
+  }
+
+  function end4Change(e) {
+    setExperience4({ ...experience4, end: e.target.value });
+  }
+
+  function description4Change(e) {
+    setExperience4({ ...experience4, description: e.target.value });
+  }
+
   return (
     <>
       <section className="CVBuilder">
@@ -119,16 +179,38 @@ function App() {
           updateGitHub={gitHubChange}
         />
         <AboutMe updateAboutMe={aboutMeChange} />
-        <div className="experienceContainer">
-          <Experience 
-            updatePosition={position1Change}
-            updateCompany={company1Change}
-            updateStartDate={start1Change}
-            updateEndDate={end1Change}
-            updateDescription={description1Change}
-          />
-        </div>
-        <AddExperience />
+        <Experience
+          experienceNum="" 
+          updatePosition={position1Change}
+          updateCompany={company1Change}
+          updateStartDate={start1Change}
+          updateEndDate={end1Change}
+          updateDescription={description1Change}
+        />
+        <Experience
+          experienceNum="2" 
+          updatePosition={position2Change}
+          updateCompany={company2Change}
+          updateStartDate={start2Change}
+          updateEndDate={end2Change}
+          updateDescription={description2Change}
+        />
+        <Experience
+          experienceNum="3" 
+          updatePosition={position3Change}
+          updateCompany={company3Change}
+          updateStartDate={start3Change}
+          updateEndDate={end3Change}
+          updateDescription={description3Change}
+        />
+        <Experience
+          experienceNum="4" 
+          updatePosition={position4Change}
+          updateCompany={company4Change}
+          updateStartDate={start4Change}
+          updateEndDate={end4Change}
+          updateDescription={description4Change}
+        />
       </section>
       <section className="CV">
         <div className="info">
