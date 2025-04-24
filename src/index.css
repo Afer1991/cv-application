@@ -90,7 +90,6 @@ hr {
 
 .experienceGrid h2 {
   font-size: .6rem;
-  display: inline;
 }
 
 @media (min-width: 375px) {
@@ -117,6 +116,10 @@ hr {
 
   .experienceGrid h2 {
     font-size: .7rem;
+  }
+
+  .experienceGrid p {
+    margin-top: .1rem;
   }
 }
 

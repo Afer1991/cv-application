@@ -13,6 +13,46 @@ function App() {
   const [gitHub, setGitHub] = useState('');
   const [aboutMe, setAboutMe] = useState('Tell something about yourself...');
 
+  const [experience1, setExperience1] = useState(
+    { 
+      position: 'Position',
+      company: 'Company',
+      start: 'Start',
+      end: 'End',
+      description: 'Describe your responsibilities and achievements...'
+    }
+  );
+
+  const [experience2, setExperience2] = useState(
+    { 
+      position: '',
+      company: '',
+      start: '',
+      end: '',
+      description: ''
+    }
+  );
+
+  const [experience3, setExperience3] = useState(
+    { 
+      position: '',
+      company: '',
+      start: '',
+      end: '',
+      description: ''
+    }
+  );
+
+  const [experience4, setExperience4] = useState(
+    { 
+      position: '',
+      company: '',
+      start: '',
+      end: '',
+      description: ''
+    }
+  );
+
   function firstNameChange(e) {
     setFirstName(e.target.value);
   }
@@ -45,6 +85,26 @@ function App() {
     setAboutMe(e.target.value);
   }
 
+  function position1Change(e) {
+    setExperience1({ ...experience1, position: e.target.value });
+  }
+
+  function company1Change(e) {
+    setExperience1({ ...experience1, company: e.target.value });
+  }
+
+  function start1Change(e) {
+    setExperience1({ ...experience1, start: e.target.value });
+  }
+
+  function end1Change(e) {
+    setExperience1({ ...experience1, end: e.target.value });
+  }
+
+  function description1Change(e) {
+    setExperience1({ ...experience1, description: e.target.value });
+  }
+
   return (
     <>
       <section className="CVBuilder">
@@ -58,7 +118,13 @@ function App() {
           updateGitHub={gitHubChange}
         />
         <AboutMe updateAboutMe={aboutMeChange} />
-        <Experience />
+        <Experience 
+          updatePosition={position1Change}
+          updateCompany={company1Change}
+          updateStartDate={start1Change}
+          updateEndDate={end1Change}
+          updateDescription={description1Change}
+        />
       </section>
       <section className="CV">
         <div className="info">
@@ -92,20 +158,24 @@ function App() {
           <hr />
           <div className="experienceGrid">
             <div>
-              <h2>Experience 1</h2><span> Start date - End date</span>
-              <p>Describe your responsibilities and achievements...</p>
+              <h2>{experience1.position}</h2>
+              <span>{experience1.company} |</span><span> {experience1.start} - {experience1.end}</span>
+              <p>{experience1.description}</p>
             </div>
             <div>
-              <h2>Experience 2</h2><span> Start date - End date</span>
-              <p>Describe your responsibilities and achievements...</p>
+              <h2>{experience2.position}</h2>
+              <span>{experience2.company} {experience2.company !== '' ? " |" : null}</span><span> {experience2.start} {experience2.start !== '' ? "-" : null} {experience2.end}</span>
+              <p>{experience2.description}</p>
             </div>
             <div>
-              <h2>Experience 3</h2><span> Start date - End date</span>
-              <p>Describe your responsibilities and achievements...</p>
+            <h2>{experience3.position}</h2>
+              <span>{experience3.company} {experience3.company !== '' ? " |" : null}</span><span> {experience3.start} {experience3.start !== '' ? "-" : null} {experience3.end}</span>
+              <p>{experience3.description}</p>
             </div>
             <div>
-              <h2>Experience 4</h2><span> Start date - End date</span>
-              <p>Describe your responsibilities and achievements...</p>
+              <h2>{experience4.position}</h2>
+              <span>{experience4.company} {experience4.company !== '' ? " |" : null}</span><span> {experience4.start} {experience4.start !== '' ? "-" : null} {experience4.end}</span>
+              <p>{experience4.description}</p>
             </div>
           </div>
         </div>
