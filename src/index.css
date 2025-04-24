@@ -54,11 +54,13 @@ a:visited {
   color: rgb(0, 0, 238);
 }
 
-.aboutMe {
-  padding: 1.5rem;
+.aboutMe, 
+.experience {
+  padding: 1rem 1.75rem;
 }
 
-.aboutMe h1 {
+.aboutMe h1,
+.experience h1 {
   color: #3E7CB1;
   font-weight: bolder;
   margin-bottom: .5rem;
@@ -74,37 +76,74 @@ hr {
   border: 1px solid #000;
 }
 
-.aboutMe p {
+.aboutMe p,
+.experienceGrid span,
+.experienceGrid p {
   font-size: .5rem;
 }
 
+.experienceGrid {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.experienceGrid h2 {
+  font-size: .6rem;
+  display: inline;
+}
+
 @media (min-width: 375px) {
-  .name h1, .aboutMe h1 {
+  .name h1, 
+  .aboutMe h1,
+  .experience h1 {
     font-size: .9rem;
   }
   
-  .name p, .aboutMe p, .contactInfo > * {
+  .name p, 
+  .aboutMe p, 
+  .contactInfo > *,
+  .experienceGrid span,
+  .experienceGrid p {
     font-size: .65rem;
   }
 
-  .info, .aboutMe {
+  .info, 
+  .aboutMe, 
+  .experience {
     padding-left: 1.75rem;
     padding-right: 1.75rem;
+  }
+
+  .experienceGrid h2 {
+    font-size: .7rem;
   }
 }
 
 @media (min-width: 525px) {
-  .name h1, .aboutMe h1 {
+  .name h1, 
+  .aboutMe h1,
+  .experience h1 {
     font-size: 1.5rem;
   }
   
-  .name p, .aboutMe p, .contactInfo > * {
+  .name p, 
+  .aboutMe p, 
+  .contactInfo > *,
+  .experienceGrid span,
+  .experienceGrid p {
     font-size: .75rem;
   }
 
-  .info, .aboutMe {
+  .info, 
+  .aboutMe, 
+  .experience {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .experienceGrid h2 {
+    font-size: 1.2rem;
   }
 }
 
@@ -113,26 +152,48 @@ hr {
     display: flex;
   }
 
-  .name h1, .aboutMe h1 {
+  .name h1, 
+  .aboutMe h1,
+  .experience h1 {
     font-size: 1rem;
   }
   
-  .name p, .aboutMe p, .contactInfo > * {
+  .name p, 
+  .aboutMe p, 
+  .contactInfo > *,
+  .experienceGrid span,
+  .experienceGrid p {
     font-size: .65rem;
+  }
+
+  .experienceGrid h2 {
+    font-size: .8rem;
   }
 }
 
 @media (min-width: 925px) {
-  .name h1, .aboutMe h1 {
+  .name h1, 
+  .aboutMe h1, 
+  .experience h1 {
     font-size: 1.5rem;
   }
   
-  .name p, .aboutMe p, .contactInfo > * {
+  .name p, 
+  .aboutMe p, 
+  .contactInfo > *,
+  .experienceGrid span,
+  .experienceGrid p {
     font-size: .75rem;
   }
 
-  .info, .aboutMe {
+  .info, 
+  .aboutMe, 
+  .experience {
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  .experienceGrid h2 {
+    font-size: 1.2rem;
   }
 }

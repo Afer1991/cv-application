@@ -87,6 +87,28 @@ function App() {
             <p>{aboutMe}</p>
           </div>
         </div>
+        <div className="experience">
+          <h1>Experience</h1>
+          <hr />
+          <div className="experienceGrid">
+            <div>
+              <h2>Experience 1</h2><span> Start date - End date</span>
+              <p>Describe your responsibilities and achievements...</p>
+            </div>
+            <div>
+              <h2>Experience 2</h2><span> Start date - End date</span>
+              <p>Describe your responsibilities and achievements...</p>
+            </div>
+            <div>
+              <h2>Experience 3</h2><span> Start date - End date</span>
+              <p>Describe your responsibilities and achievements...</p>
+            </div>
+            <div>
+              <h2>Experience 4</h2><span> Start date - End date</span>
+              <p>Describe your responsibilities and achievements...</p>
+            </div>
+          </div>
+        </div>
       </section>
     </>
   )
