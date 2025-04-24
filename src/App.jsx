@@ -2,6 +2,7 @@ import PersonalInfo from "./components/PersonalInfo"
 import AboutMe from "./components/AboutMe"
 import Experience from "./components/Experience";
 import { useState } from 'react';
+import AddExperience from "./components/AddExperience";
 
 function App() {
   const [firstName, setFirstName] = useState('First Name');
@@ -118,13 +119,16 @@ function App() {
           updateGitHub={gitHubChange}
         />
         <AboutMe updateAboutMe={aboutMeChange} />
-        <Experience 
-          updatePosition={position1Change}
-          updateCompany={company1Change}
-          updateStartDate={start1Change}
-          updateEndDate={end1Change}
-          updateDescription={description1Change}
-        />
+        <div className="experienceContainer">
+          <Experience 
+            updatePosition={position1Change}
+            updateCompany={company1Change}
+            updateStartDate={start1Change}
+            updateEndDate={end1Change}
+            updateDescription={description1Change}
+          />
+        </div>
+        <AddExperience />
       </section>
       <section className="CV">
         <div className="info">

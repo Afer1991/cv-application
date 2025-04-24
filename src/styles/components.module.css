@@ -5,7 +5,8 @@
   border-radius: 1.25rem;
 }
 
-.heading {
+.heading,
+.addExperience {
   margin-bottom: .75rem;
 }
 
@@ -18,6 +19,13 @@ svg {
   color: #FFF;
   display: inline;
   margin-left: .75rem;
+  font-family: "Just Another Hand", sans-serif;
+  font-size: 3rem;
+}
+
+.addExperience h1{
+  color: #FFF;
+  display: inline;
   font-family: "Just Another Hand", sans-serif;
   font-size: 3rem;
 }
