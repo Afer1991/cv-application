@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faScrewdriverWrench } from "@fortawesome/free-solid-svg-icons"
-import Button from './Button'
 import styles from '../styles/components.module.css'
 
 function Experience ({

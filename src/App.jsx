@@ -1,6 +1,7 @@
 import PersonalInfo from "./components/PersonalInfo"
 import AboutMe from "./components/AboutMe"
 import Experience from "./components/Experience";
+import Education from "./components/Education"
 import { useState } from 'react';
 
 
@@ -211,6 +212,7 @@ function App() {
           updateEndDate={end4Change}
           updateDescription={description4Change}
         />
+        <Education />
       </section>
       <section className="CV">
         <div className="info">
