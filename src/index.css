@@ -47,7 +47,7 @@
 }
 
 .bold {
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 a:visited {
@@ -55,12 +55,14 @@ a:visited {
 }
 
 .aboutMe, 
-.experience {
-  padding: 1rem 1.75rem;
+.experience,
+.education {
+  padding: 1rem 1.5rem;
 }
 
 .aboutMe h1,
-.experience h1 {
+.experience h1,
+.education h1 {
   color: #3E7CB1;
   font-weight: bolder;
   margin-bottom: .5rem;
@@ -78,7 +80,8 @@ hr {
 
 .aboutMe p,
 .experienceGrid span,
-.experienceGrid p {
+.experienceGrid p,
+.education p {
   font-size: .5rem;
 }
 
@@ -92,6 +95,11 @@ hr {
   font-size: .6rem;
 }
 
+.education div {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media (min-width: 375px) {
   .name h1, 
   .aboutMe h1,
@@ -103,13 +111,15 @@ hr {
   .aboutMe p, 
   .contactInfo > *,
   .experienceGrid span,
-  .experienceGrid p {
+  .experienceGrid p,
+  .education p {
     font-size: .65rem;
   }
 
   .info, 
   .aboutMe, 
-  .experience {
+  .experience,
+  .education {
     padding-left: 1.75rem;
     padding-right: 1.75rem;
   }
@@ -126,7 +136,8 @@ hr {
 @media (min-width: 525px) {
   .name h1, 
   .aboutMe h1,
-  .experience h1 {
+  .experience h1,
+  .education h1 {
     font-size: 1.5rem;
   }
   
@@ -134,13 +145,15 @@ hr {
   .aboutMe p, 
   .contactInfo > *,
   .experienceGrid span,
-  .experienceGrid p {
+  .experienceGrid p,
+  .education p {
     font-size: .75rem;
   }
 
   .info, 
   .aboutMe, 
-  .experience {
+  .experience,
+  .education {
     padding-left: 2rem;
     padding-right: 2rem;
   }
@@ -157,7 +170,8 @@ hr {
 
   .name h1, 
   .aboutMe h1,
-  .experience h1 {
+  .experience h1,
+  .education h1 {
     font-size: 1rem;
   }
   
@@ -165,7 +179,8 @@ hr {
   .aboutMe p, 
   .contactInfo > *,
   .experienceGrid span,
-  .experienceGrid p {
+  .experienceGrid p,
+  .education p {
     font-size: .65rem;
   }
 
@@ -177,7 +192,8 @@ hr {
 @media (min-width: 925px) {
   .name h1, 
   .aboutMe h1, 
-  .experience h1 {
+  .experience h1,
+  .education h1 {
     font-size: 1.5rem;
   }
   
@@ -185,13 +201,15 @@ hr {
   .aboutMe p, 
   .contactInfo > *,
   .experienceGrid span,
-  .experienceGrid p {
+  .experienceGrid p,
+  .education p {
     font-size: .75rem;
   }
 
   .info, 
   .aboutMe, 
-  .experience {
+  .experience,
+  .education {
     padding-left: 3rem;
     padding-right: 3rem;
   }

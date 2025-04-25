@@ -267,6 +267,14 @@ function App() {
             </div>
           </div>
         </div>
+        <div class="education">
+          <h1>Education</h1>
+          <hr />
+          <div>
+            <p class="bold">School Name</p>
+            <p>Degree Type</p>
+          </div>
+        </div>
       </section>
     </>
   )
