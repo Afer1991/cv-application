@@ -55,6 +55,9 @@ function App() {
     }
   );
 
+  const [schoolName, setSchoolName] = useState("School Name");
+  const [degreeType, setDegreeType] = useState("Degree Type");
+
   function firstNameChange(e) {
     setFirstName(e.target.value);
   }
@@ -167,6 +170,14 @@ function App() {
     setExperience4({ ...experience4, description: e.target.value });
   }
 
+  function schoolNameChange(e) {
+    setSchoolName(e.target.value);
+  }
+
+  function degreeTypeChange(e) {
+    setDegreeType(e.target.value);
+  }
+
   return (
     <>
       <section className="CVBuilder">
@@ -212,7 +223,10 @@ function App() {
           updateEndDate={end4Change}
           updateDescription={description4Change}
         />
-        <Education />
+        <Education 
+          updateSchool={schoolNameChange}
+          updateDegree={degreeTypeChange}
+        />
       </section>
       <section className="CV">
         <div className="info">
@@ -271,8 +285,8 @@ function App() {
           <h1>Education</h1>
           <hr />
           <div>
-            <p class="bold">School Name</p>
-            <p>Degree Type</p>
+            <p class="bold">{schoolName}</p>
+            <p>{degreeType}</p>
           </div>
         </div>
       </section>
