@@ -3,6 +3,7 @@ import AboutMe from "./components/AboutMe"
 import Experience from "./components/Experience";
 import Education from "./components/Education"
 import Skills from "./components/Skills";
+import ProReference from "./components/ProReference";
 import { useState } from 'react';
 
 
@@ -254,6 +255,7 @@ function App() {
           currentSkills={skills}
           removeSkill={deleteSkill}
         />
+        <ProReference />
       </section>
       <section className="CV">
         <div className="info">
