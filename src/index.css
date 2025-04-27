@@ -42,10 +42,6 @@
   grid-template-columns: 1fr 3fr;
 }
 
-.contactInfo > * {
-  font-size: .5rem;
-}
-
 .bold {
   font-weight: bold;
 }
@@ -57,17 +53,18 @@ a:visited {
 .aboutMe, 
 .experience,
 .education,
-.skills {
+.skills,
+.proReferences {
   padding: 1rem 1.5rem;
 }
 
 .aboutMe h1,
 .experience h1,
 .education h1,
-.skills h1 {
+.skills h1,
+.proReferences h1 {
   color: #3E7CB1;
   font-weight: bold;
-  margin-bottom: .5rem;
   font-size: .75rem;
 }
 
@@ -80,11 +77,13 @@ hr {
   border: 1px solid #000;
 }
 
+.contactInfo > *,
 .aboutMe p,
 .experienceGrid span,
 .experienceGrid p,
 .education p,
-.skills li {
+.skills li,
+.proReferences div > * {
   font-size: .5rem;
 }
 
@@ -109,21 +108,28 @@ hr {
   gap: 1rem;
 }
 
+.proReferences div {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media (min-width: 375px) {
   .name h1, 
   .aboutMe h1,
   .experience h1,
-  .skills h1 {
+  .skills h1,
+  .proReferences h1 {
     font-size: .9rem;
   }
   
+  .contactInfo > *,
   .name p, 
   .aboutMe p, 
-  .contactInfo > *,
   .experienceGrid span,
   .experienceGrid p,
   .education p,
-  .skills li {
+  .skills li,
+  .proReferences div > * {
     font-size: .65rem;
   }
 
@@ -131,7 +137,8 @@ hr {
   .aboutMe, 
   .experience,
   .education,
-  .skills {
+  .skills,
+  .proReferences {
     padding-left: 1.75rem;
     padding-right: 1.75rem;
   }
@@ -150,17 +157,19 @@ hr {
   .aboutMe h1,
   .experience h1,
   .education h1,
-  .skills h1 {
+  .skills h1,
+  .proReferences h1 {
     font-size: 1.5rem;
   }
   
+  .contactInfo > *,
   .name p, 
   .aboutMe p, 
-  .contactInfo > *,
   .experienceGrid span,
   .experienceGrid p,
   .education p,
-  .skills li {
+  .skills li,
+  .proReferences div > * {
     font-size: .75rem;
   }
 
@@ -168,7 +177,8 @@ hr {
   .aboutMe, 
   .experience,
   .education,
-  .skills {
+  .skills,
+  .proReferences {
     padding-left: 2rem;
     padding-right: 2rem;
   }
@@ -187,17 +197,19 @@ hr {
   .aboutMe h1,
   .experience h1,
   .education h1,
-  .skills h1 {
+  .skills h1,
+  .proReferences h1 {
     font-size: 1rem;
   }
   
+  .contactInfo > *,
   .name p, 
   .aboutMe p, 
-  .contactInfo > *,
   .experienceGrid span,
   .experienceGrid p,
   .education p,
-  .skills li {
+  .skills li,
+  .proReferences div > * {
     font-size: .65rem;
   }
 
@@ -211,17 +223,19 @@ hr {
   .aboutMe h1, 
   .experience h1,
   .education h1,
-  .skills h1 {
+  .skills h1,
+  .proReferences h1 {
     font-size: 1.5rem;
   }
   
+  .contactInfo > *,
   .name p, 
   .aboutMe p, 
-  .contactInfo > *,
   .experienceGrid span,
   .experienceGrid p,
   .education p,
-  .skills li {
+  .skills li,
+  .proReferences div > * {
     font-size: .75rem;
   }
 
@@ -229,7 +243,8 @@ hr {
   .aboutMe, 
   .experience,
   .education,
-  .skills {
+  .skills,
+  .proReferences {
     padding-left: 3rem;
     padding-right: 3rem;
   }

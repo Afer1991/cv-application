@@ -60,8 +60,46 @@ function App() {
   const [schoolName, setSchoolName] = useState("School Name");
   const [degreeType, setDegreeType] = useState("Degree Type");
 
-  const [skills, setSkills] = useState([{ id: Date.now(), name: "Skill Name"}]);
+  const [skills, setSkills] = useState(
+    [
+      { 
+        id: Date.now(), 
+        name: "Skill Name"
+      }
+    ]
+  );
+
   const [skill, setSkill] = useState("");
+
+  const [proReference1, setProReference1] = useState(
+    {
+      name: 'Name',
+      position: 'Position',
+      company: 'Company',
+      phone: 'Ph. #',
+      email: 'email'
+    }
+  );
+
+  const [proReference2, setProReference2] = useState(
+    {
+      name: '',
+      position: '',
+      company: '',
+      phone: '',
+      email: ''
+    }
+  );
+
+  const [proReference3, setProReference3] = useState(
+    {
+      name: '',
+      position: '',
+      company: '',
+      phone: '',
+      email: ''
+    }
+  );
 
   function firstNameChange(e) {
     setFirstName(e.target.value);
@@ -199,6 +237,66 @@ function App() {
     setSkill(e.target.value);
   }
 
+  function proRef1NameChange(e) {
+    setProReference1({...proReference1, name: e.target.value});
+  }
+
+  function proRef1PositionChange(e) {
+    setProReference1({...proReference1, position: e.target.value});
+  }
+
+  function proRef1CompanyChange(e) {
+    setProReference1({...proReference1, company: e.target.value});
+  }
+
+  function proRef1PhoneChange(e) {
+    setProReference1({...proReference1, phone: e.target.value});
+  }
+
+  function proRef1EmailChange(e) {
+    setProReference1({...proReference1, email: e.target.value});
+  }
+
+  function proRef2NameChange(e) {
+    setProReference2({...proReference2, name: e.target.value});
+  }
+
+  function proRef2PositionChange(e) {
+    setProReference2({...proReference2, position: e.target.value});
+  }
+
+  function proRef2CompanyChange(e) {
+    setProReference2({...proReference2, company: e.target.value});
+  }
+
+  function proRef2PhoneChange(e) {
+    setProReference2({...proReference2, phone: e.target.value});
+  }
+
+  function proRef2EmailChange(e) {
+    setProReference2({...proReference2, email: e.target.value});
+  }
+
+  function proRef3NameChange(e) {
+    setProReference3({...proReference3, name: e.target.value});
+  }
+
+  function proRef3PositionChange(e) {
+    setProReference3({...proReference3, position: e.target.value});
+  }
+
+  function proRef3CompanyChange(e) {
+    setProReference3({...proReference3, company: e.target.value});
+  }
+
+  function proRef3PhoneChange(e) {
+    setProReference3({...proReference3, phone: e.target.value});
+  }
+
+  function proRef3EmailChange(e) {
+    setProReference3({...proReference3, email: e.target.value});
+  }
+
   return (
     <>
       <section className="CVBuilder">
@@ -255,7 +353,30 @@ function App() {
           currentSkills={skills}
           removeSkill={deleteSkill}
         />
-        <ProReference />
+        <ProReference 
+          proReferenceNum=""
+          updateRefName={proRef1NameChange}
+          updateRefPos={proRef1PositionChange}
+          updateRefCompany={proRef1CompanyChange}
+          updateRefPhone={proRef1PhoneChange}
+          updateRefEmail={proRef1EmailChange}
+        />
+        <ProReference 
+          proReferenceNum="2"
+          updateRefName={proRef2NameChange}
+          updateRefPos={proRef2PositionChange}
+          updateRefCompany={proRef2CompanyChange}
+          updateRefPhone={proRef2PhoneChange}
+          updateRefEmail={proRef2EmailChange}
+        />
+        <ProReference 
+          proReferenceNum="3"
+          updateRefName={proRef3NameChange}
+          updateRefPos={proRef3PositionChange}
+          updateRefCompany={proRef3CompanyChange}
+          updateRefPhone={proRef3PhoneChange}
+          updateRefEmail={proRef3EmailChange}
+        />
       </section>
       <section className="CV">
         <div className="info">
@@ -324,6 +445,28 @@ function App() {
           <ul>
             {skills.map(skill => <li key={skill.id} className="bold">{skill.name}</li>)}
           </ul>
+        </div>
+        <div className="proReferences">
+          <h1>Professional References</h1>
+          <hr />
+          <div>
+            <p>{proReference1.name}</p>
+            <p>{proReference1.position}, {proReference1.company}</p>
+            <p>{proReference1.phone}</p>
+            <a href={"mailto:" + proReference1.email}>{proReference1.email}</a>
+          </div>
+          <div>
+          <p>{proReference2.name}</p>
+            <p>{proReference2.position}{proReference2.position !== '' ? "," : null} {proReference2.company}</p>
+            <p>{proReference2.phone}</p>
+            <a href={"mailto:" + proReference2.email}>{proReference2.email}</a>
+          </div>
+          <div>
+            <p>{proReference3.name}</p>
+            <p>{proReference3.position}{proReference3.position !== '' ? "," : null} {proReference3.company}</p>
+            <p>{proReference3.phone}</p>
+            <a href={"mailto:" + proReference3.email}>{proReference3.email}</a>
+          </div>
         </div>
       </section>
     </>
