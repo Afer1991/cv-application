@@ -30,7 +30,8 @@ svg {
   font-size: 3rem;
 }
 
-.container input, .container textarea {
+.container input, 
+.container textarea {
   width: 100%;
   margin-top: .75rem;
   padding: .5rem;
@@ -42,9 +43,17 @@ svg {
   font-family: "Roboto", sans-serif;
 }
 
-.container input:focus, .container textarea:focus {
-  outline: none;
+.container input:focus, 
+.container textarea:focus,
+.container input:hover, 
+.container textarea:hover,
+.skillList span:hover {
   opacity: .8;
+}
+
+.container input:focus, 
+.container textarea:focus {
+  outline: none;
 }
 
 .doubleInput {
@@ -56,43 +65,84 @@ svg {
   resize: none;
 }
 
-.button {
-  background-color: #75757548;
-  border: none;
-  border-radius: .5rem;
-  padding: .35rem 2.5rem;
+.skillList li {
   margin-top: .75rem;
+  list-style-type: none;
+  display: flex;
 }
 
-.button:hover {
-  opacity: .8;
+.skillList span {
+  flex-grow: 1;
+  padding: .5rem;
+  background-color: #75757548;
+  border-radius: .5rem;
+  font-family: "Roboto", sans-serif;
+  color: #808080;
+}
+
+.skillList svg {
+  font-size: 1.1rem;
+  color: #FFF;
+  padding: .5rem;
+}
+
+
+.skillList svg:hover {
   cursor: pointer;
 }
 
-.button svg {
+.button {
+  background: #75757548;
+  color: #81A4CD;
+  border: none;
+  border-radius: .5rem;
+  padding: .2rem 2.5rem;
+  margin-top: .75rem;
   font-size: 1rem;
+  transition: background 1s ease, color 1s ease;
 }
 
+.button:hover {
+  background: #81A4CD;
+  color: #0D0A0B;
+  cursor: pointer;
+}
+
+
 @media (min-width: 425px) {
-  .container input, .container textarea, .button svg {
+  .container input, 
+  .container textarea {
     font-size: 1rem;
+  }
+
+  .button {
+    font-size: 1.25rem;
   }
 }
 
 @media (min-width: 600px) {
-  .container input, .container textarea, .button svg {
+  .container input, 
+  .container textarea {
     font-size: 1.3125rem;
   }
 }
 
 @media (min-width: 700px) {
-  .container input, .container textarea, .button svg {
+  .container input, 
+  .container textarea {
     font-size: 1rem;
   }
 }
 
 @media (min-width: 925px) {
-  .container input, .container textarea, .button svg {
+  .container input, 
+  .container textarea {
     font-size: 1.3125rem;
+  }
+
+  .button {
+    font-size: 1.5rem;
+    padding-top: .1rem;
+    padding-bottom: .1rem;
   }
 }

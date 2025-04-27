@@ -56,15 +56,17 @@ a:visited {
 
 .aboutMe, 
 .experience,
-.education {
+.education,
+.skills {
   padding: 1rem 1.5rem;
 }
 
 .aboutMe h1,
 .experience h1,
-.education h1 {
+.education h1,
+.skills h1 {
   color: #3E7CB1;
-  font-weight: bolder;
+  font-weight: bold;
   margin-bottom: .5rem;
   font-size: .75rem;
 }
@@ -81,7 +83,8 @@ hr {
 .aboutMe p,
 .experienceGrid span,
 .experienceGrid p,
-.education p {
+.education p,
+.skills li {
   font-size: .5rem;
 }
 
@@ -100,10 +103,17 @@ hr {
   justify-content: space-between;
 }
 
+.skills ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+}
+
 @media (min-width: 375px) {
   .name h1, 
   .aboutMe h1,
-  .experience h1 {
+  .experience h1,
+  .skills h1 {
     font-size: .9rem;
   }
   
@@ -112,14 +122,16 @@ hr {
   .contactInfo > *,
   .experienceGrid span,
   .experienceGrid p,
-  .education p {
+  .education p,
+  .skills li {
     font-size: .65rem;
   }
 
   .info, 
   .aboutMe, 
   .experience,
-  .education {
+  .education,
+  .skills {
     padding-left: 1.75rem;
     padding-right: 1.75rem;
   }
@@ -137,7 +149,8 @@ hr {
   .name h1, 
   .aboutMe h1,
   .experience h1,
-  .education h1 {
+  .education h1,
+  .skills h1 {
     font-size: 1.5rem;
   }
   
@@ -146,14 +159,16 @@ hr {
   .contactInfo > *,
   .experienceGrid span,
   .experienceGrid p,
-  .education p {
+  .education p,
+  .skills li {
     font-size: .75rem;
   }
 
   .info, 
   .aboutMe, 
   .experience,
-  .education {
+  .education,
+  .skills {
     padding-left: 2rem;
     padding-right: 2rem;
   }
@@ -171,7 +186,8 @@ hr {
   .name h1, 
   .aboutMe h1,
   .experience h1,
-  .education h1 {
+  .education h1,
+  .skills h1 {
     font-size: 1rem;
   }
   
@@ -180,7 +196,8 @@ hr {
   .contactInfo > *,
   .experienceGrid span,
   .experienceGrid p,
-  .education p {
+  .education p,
+  .skills li {
     font-size: .65rem;
   }
 
@@ -193,7 +210,8 @@ hr {
   .name h1, 
   .aboutMe h1, 
   .experience h1,
-  .education h1 {
+  .education h1,
+  .skills h1 {
     font-size: 1.5rem;
   }
   
@@ -202,14 +220,16 @@ hr {
   .contactInfo > *,
   .experienceGrid span,
   .experienceGrid p,
-  .education p {
+  .education p,
+  .skills li {
     font-size: .75rem;
   }
 
   .info, 
   .aboutMe, 
   .experience,
-  .education {
+  .education,
+  .skills {
     padding-left: 3rem;
     padding-right: 3rem;
   }

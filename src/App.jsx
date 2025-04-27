@@ -2,6 +2,7 @@ import PersonalInfo from "./components/PersonalInfo"
 import AboutMe from "./components/AboutMe"
 import Experience from "./components/Experience";
 import Education from "./components/Education"
+import Skills from "./components/Skills";
 import { useState } from 'react';
 
 
@@ -57,6 +58,9 @@ function App() {
 
   const [schoolName, setSchoolName] = useState("School Name");
   const [degreeType, setDegreeType] = useState("Degree Type");
+
+  const [skills, setSkills] = useState([{ id: Date.now(), name: "Skill Name"}]);
+  const [skill, setSkill] = useState("");
 
   function firstNameChange(e) {
     setFirstName(e.target.value);
@@ -178,6 +182,22 @@ function App() {
     setDegreeType(e.target.value);
   }
 
+  function addSkill(e) {
+    e.preventDefault();
+    if (skills.length < 6) {
+      setSkills([...skills, { id: Date.now(), name: skill }]);
+      setSkill("");
+    };
+  }
+
+  function deleteSkill(id) {
+    setSkills(skills.filter((skill) => skill.id !== id));
+  }
+
+  function skillInput(e) {
+    setSkill(e.target.value);
+  }
+
   return (
     <>
       <section className="CVBuilder">
@@ -226,6 +246,13 @@ function App() {
         <Education 
           updateSchool={schoolNameChange}
           updateDegree={degreeTypeChange}
+        />
+        <Skills
+          updateSkillInput={skillInput} 
+          updateSkills={addSkill}
+          currentSkill={skill}
+          currentSkills={skills}
+          removeSkill={deleteSkill}
         />
       </section>
       <section className="CV">
@@ -281,13 +308,20 @@ function App() {
             </div>
           </div>
         </div>
-        <div class="education">
+        <div className="education">
           <h1>Education</h1>
           <hr />
           <div>
-            <p class="bold">{schoolName}</p>
+            <p className="bold">{schoolName}</p>
             <p>{degreeType}</p>
           </div>
+        </div>
+        <div className="skills">
+          <h1>Skills</h1>
+          <hr />
+          <ul>
+            {skills.map(skill => <li key={skill.id} className="bold">{skill.name}</li>)}
+          </ul>
         </div>
       </section>
     </>
