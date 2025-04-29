@@ -4,15 +4,29 @@
   box-sizing: border-box;
 }
 
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.CVBuilder {
+  max-height: 100vh;
+  overflow: scroll;
+}
+
 .CV {
   margin: 1.25rem;
   font-family: "Roboto", sans-serif;
   min-width: 50%;
-  background: #DBE4EE;
+}
+
+.CV-pdf {
+  background: white;
+  box-shadow: 0 0 .25rem #00000080;
 }
 
 .info {
-  background-color: #0D0A0B;
+  background-color: #D33F49;
   display: flex;
   justify-content: space-between;
   padding: 0 1.5rem;
@@ -26,28 +40,30 @@
   margin: 0;
   font-family: "Roboto", sans-serif;
   font-size: .75rem;
-  color: #FFF;
+  color: #0D0A0B;
 }
 
 .name p {
   margin-top: 1rem;
-  color: #fff;
+  color: #0D0A0B;
   font-size: .5rem;
 }
 
 .contactInfo {
-  background: #81A4CD;
+  background: #0D0A0B;
   padding: .65rem;
   display: grid;
   grid-template-columns: 1fr 3fr;
+  color: #FFF;
 }
 
 .bold {
   font-weight: bold;
 }
 
+a,
 a:visited {
-  color: rgb(0, 0, 238);
+  color: #FFF;
 }
 
 .aboutMe, 
@@ -63,13 +79,14 @@ a:visited {
 .education h1,
 .skills h1,
 .proReferences h1 {
-  color: #3E7CB1;
+  color: #0D0A0B;
   font-weight: bold;
   font-size: .75rem;
 }
 
-.aboutMe span {
-  color: #000;
+.aboutMe span,
+.proReferences span {
+  color: #D33F49;
 }
 
 hr {

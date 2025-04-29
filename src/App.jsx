@@ -379,6 +379,7 @@ function App() {
         />
       </section>
       <section className="CV">
+        <div className="CV-pdf">
         <div className="info">
           <div className="name">
             <h1>{firstName}<br />{lastName}</h1>
@@ -399,7 +400,7 @@ function App() {
           </div>
         </div>
         <div className="aboutMe">
-          <h1>About<span>Me</span></h1>
+          <h1><span>About</span>Me</h1>
           <hr />
           <div>
             <p>{aboutMe}</p>
@@ -447,7 +448,7 @@ function App() {
           </ul>
         </div>
         <div className="proReferences">
-          <h1>Professional References</h1>
+          <h1><span>Professional</span>References</h1>
           <hr />
           <div>
             <p>{proReference1.name}</p>
@@ -467,6 +468,7 @@ function App() {
             <p>{proReference3.phone}</p>
             <a href={"mailto:" + proReference3.email}>{proReference3.email}</a>
           </div>
+        </div>
         </div>
       </section>
     </>
