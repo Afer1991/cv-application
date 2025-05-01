@@ -9,11 +9,6 @@
   margin: 0 auto;
 }
 
-.CVBuilder {
-  max-height: 100vh;
-  overflow: scroll;
-}
-
 .CV {
   margin: 1.25rem;
   font-family: "Roboto", sans-serif;
@@ -23,6 +18,7 @@
 .CV-pdf {
   background: white;
   box-shadow: 0 0 .25rem #00000080;
+  padding-bottom: .5rem;
 }
 
 .info {
@@ -61,8 +57,8 @@
   font-weight: bold;
 }
 
-a,
-a:visited {
+.contactInfo a,
+.contactInfo a:visited {
   color: #FFF;
 }
 
@@ -128,6 +124,7 @@ hr {
 .proReferences div {
   display: flex;
   justify-content: space-between;
+  margin-bottom: .25rem;
 }
 
 @media (min-width: 375px) {
@@ -208,6 +205,11 @@ hr {
 @media (min-width: 700px) {
   #root {
     display: flex;
+  }
+
+  .CVBuilder {
+    max-height: 100vh;
+    overflow: scroll;
   }
 
   .name h1, 
