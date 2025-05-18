@@ -93,7 +93,7 @@ svg {
 
 .button {
   background: #75757548;
-  color: #81A4CD;
+  color: #D33F49;
   border: none;
   border-radius: .5rem;
   padding: .2rem 2.5rem;
@@ -103,7 +103,7 @@ svg {
 }
 
 .button:hover {
-  background: #81A4CD;
+  background: #D33F49;
   color: #0D0A0B;
   cursor: pointer;
 }
